@@ -34,7 +34,59 @@ a {
     text-decoration: none;
 }
 
+.btn:hover {
+    background: #2d49b2;
+}
+
+.btn {
+    color: #fff;
+    background: #446eff;
+    line-height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-top: 24px;
+    min-height: 48px;
+    padding: 0 48px;
+    font-size: 16px;
+    position: relative;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    min-width: 64px;
+    text-transform: capitalize;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.btn .icon {
+    margin-left: 8px;
+    margin-right: -4px;
+}
+
+.btn .icon svg {
+    font-size: 20px;
+    width: 16px;
+    height: 16px;
+}
+
 /* header */
+.header {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header .container {
+    width: 100%;
+    padding: 0 8px;
+}
+
 .home-nav {
     display: flex;
 }
@@ -185,12 +237,15 @@ a {
     padding-right: 24px;
 }
 
-.main .banner {
+/* banner */
+.banner {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 528px;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
 }
 
 .banner .text-heading {
@@ -210,11 +265,9 @@ a {
 .banner .text-description {
     margin: 0;
     font-size: 20px;
-    height: 56px;
     line-height: 28px;
     font-weight: 400;
     text-align: center;
-    white-space: pre-line;
     color: #ebeef5;
 }
 
@@ -266,31 +319,79 @@ a {
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    white-space: pre-line;
 }
 
-.wallet .button {
-    line-height: 10px;
-    min-height: 48px;
-    padding: 0 48px;
-    width: fit-content;
+/* earn */
+.earn {
+    margin-bottom: 80px;
+}
+
+.earn .box {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+}
+
+.earn .earn-list {
+    margin-bottom: 80px;
+    display: flex;
+    margin-top: -40px;
+    width: calc(100% + 40px);
+    margin-left: -40px;
+}
+
+.earn-item {
+    padding-left: 40px;
+    padding-top: 40px;
+    max-width: 50%;
+}
+
+.earn-item .item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.earn-item .title {
+    margin-bottom: 24px;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 500;
+    color: inherit;
+}
+
+.earn-item .description {
     font-size: 16px;
-    color: #fff;
-    background: #446eff;
-    border: 0;
-    border-radius: 4px;
+    line-height: 24px;
+    font-weight: 400;
+    color: inherit;
 }
 
-.wallet .icon {
-    margin-left: 8px;
-    margin-right: -4px;
+.earn-list > .earn-item:first-of-type div {
+    background: linear-gradient(260.11deg, rgb(84, 127, 231) 18.38%, rgb(46, 96, 227) 85.98%);
 }
 
-.wallet .button .icon svg {
-    font-size: 20px;
-    width: 16px;
-    height: 16px;
+.earn-list > .earn-item:first-of-type div .title,
+.earn-list > .earn-item:first-of-type div .description {
     color: #fff;
+}
+
+.earn-list > .earn-item:first-child div .btn {
+    color: #446eff;
+    background: #fff;
+    text-transform: capitalize;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.earn-list > .earn-item:first-child div .btn:hover {
+    opacity: 0.6;
+}
+
+.earn-list > .earn-item:last-child div {
+    background: #fff;
 }
